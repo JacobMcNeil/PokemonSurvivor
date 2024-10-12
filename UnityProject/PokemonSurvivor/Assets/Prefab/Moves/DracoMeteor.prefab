@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4906371893490763628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7052810753551466270}
+  - component: {fileID: 6757083677303121060}
+  - component: {fileID: 4781661084346461697}
+  m_Layer: 0
+  m_Name: DracoMeteor
+  m_TagString: Pokemon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7052810753551466270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4906371893490763628}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.59, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6757083677303121060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4906371893490763628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daaead59df9325a45a51935bb63727f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  <moveName>k__BackingField: DracoMeteor
+  <moveType>k__BackingField: dragon
+  <pokemon>k__BackingField:
+    <id>k__BackingField: 776
+    <name>k__BackingField:
+      <english>k__BackingField: turtonator
+      <japanese>k__BackingField: turtonator
+      <chinese>k__BackingField: turtonator
+      <french>k__BackingField: turtonator
+    <type>k__BackingField:
+    - fire
+    - dragon
+    <base>k__BackingField:
+      <HP>k__BackingField: 60
+      <Attack>k__BackingField: 78
+      <Defense>k__BackingField: 135
+      <SpAttack>k__BackingField: 91
+      <SpDefense>k__BackingField: 85
+      <Speed>k__BackingField: 36
+    <species>k__BackingField: 
+    <description>k__BackingField: 
+    <evolution>k__BackingField:
+      <prev>k__BackingField: []
+      <stage>k__BackingField: 1
+    <profile>k__BackingField:
+      <height>k__BackingField: 
+      <weight>k__BackingField: 
+      <egg>k__BackingField: []
+      <gender>k__BackingField: 
+  tickRate: 0.25
+  dragonInstance: {fileID: 6537803222488159289, guid: 525009966240ce643a50768cfcd85afb, type: 3}
+  MultiAmount: 0
+--- !u!58 &4781661084346461697
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4906371893490763628}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 8

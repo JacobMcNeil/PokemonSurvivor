@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4906371893490763628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7052810753551466270}
+  - component: {fileID: 2477293203230129932}
+  m_Layer: 0
+  m_Name: Toxic
+  m_TagString: Pokemon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7052810753551466270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4906371893490763628}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.59, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2477293203230129932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4906371893490763628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a86b3f5680d2da4f8ccb7e506ab2e41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  <moveName>k__BackingField: Toxic
+  <moveType>k__BackingField: poison
+  <pokemon>k__BackingField:
+    <id>k__BackingField: 41
+    <name>k__BackingField:
+      <english>k__BackingField: Zubat
+      <japanese>k__BackingField: "\u30BA\u30D0\u30C3\u30C8"
+      <chinese>k__BackingField: "\u8D85\u97F3\u8760"
+      <french>k__BackingField: Nosferapti
+    <type>k__BackingField:
+    - Poison
+    - Flying
+    <base>k__BackingField:
+      <HP>k__BackingField: 40
+      <Attack>k__BackingField: 45
+      <Defense>k__BackingField: 35
+      <SpAttack>k__BackingField: 30
+      <SpDefense>k__BackingField: 40
+      <Speed>k__BackingField: 55
+    <species>k__BackingField: "Bat Pok\xE9mon"
+    <description>k__BackingField: "Their skin is so thin that they\u2019ll be burned
+      if sunlight hits them. When it gets cold out, they gather together to warm
+      one another\u2019s bodies."
+    <evolution>k__BackingField:
+      <prev>k__BackingField: []
+      <stage>k__BackingField: 0
+    <profile>k__BackingField:
+      <height>k__BackingField: 0.8 m
+      <weight>k__BackingField: 7.5 kg
+      <egg>k__BackingField:
+      - Flying
+      <gender>k__BackingField: 50:50
+  tickRate: 0.5
+  toxicInstace: {fileID: 6537803222488159289, guid: a7870eed5ea816643a56aa61febe4a0d, type: 3}
+  MultiAmount: 0

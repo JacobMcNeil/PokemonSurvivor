@@ -1,0 +1,4 @@
+repository "PokemonSurvivor@spoonboard@cloud"
+  path "/"
+    smartbranch "/main/psychic"               
+     
