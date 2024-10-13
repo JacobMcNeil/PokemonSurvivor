@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   <moveName>k__BackingField: Stone Edge
+  <moveType>k__BackingField: rock
   tickRate: 0
   rockInstance: {fileID: 5131942609422754017, guid: a77394186fd07424d9ac0f2024afe4e4, type: 3}
-  player: {fileID: 0}
+  MultiAmount: 0

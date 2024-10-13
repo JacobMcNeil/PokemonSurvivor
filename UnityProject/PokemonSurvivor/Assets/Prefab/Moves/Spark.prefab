@@ -166,5 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   <moveName>k__BackingField: Spark
+  <moveType>k__BackingField: electric
   <baseDmg>k__BackingField: 1
   <coolDown>k__BackingField: 0
+  MultiAmount: 0

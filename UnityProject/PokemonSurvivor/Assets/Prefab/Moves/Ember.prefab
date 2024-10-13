@@ -93,10 +93,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   <moveName>k__BackingField: Ember
+  <moveType>k__BackingField: fire
   tickRate: 0.2
-  flame: {fileID: 8987260471394901933}
   emberInstance: {fileID: 6041080147213875706, guid: 0ace48ffbc93bf54fac5c8fb3e672d94, type: 3}
-  player: {fileID: 0}
+  MultiAmount: 0
 --- !u!1 &8987260471394901933
 GameObject:
   m_ObjectHideFlags: 0

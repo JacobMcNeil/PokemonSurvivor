@@ -166,6 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   <moveName>k__BackingField: Revenge
+  <moveType>k__BackingField: fighting
   <baseDmg>k__BackingField: 0
   <coolDown>k__BackingField: 0
   activate: 0

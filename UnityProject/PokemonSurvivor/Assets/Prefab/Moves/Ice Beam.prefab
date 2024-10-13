@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   <moveName>k__BackingField: Ice Beam
+  <moveType>k__BackingField: ice
   tickRate: 0
   iceInstance: {fileID: 7132202566285992553, guid: 3a50978d4e57e084db3976e8005eb5c3, type: 3}
-  player: {fileID: 0}
+  MultiAmount: 0

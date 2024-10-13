@@ -222,5 +222,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   <moveName>k__BackingField: PsychoCut
+  <moveType>k__BackingField: psychic
   razorLeaf: {fileID: 1358326184512564390, guid: 2e4b43b722148134696eadcabe574448, type: 3}
   MultiAmount: 0
