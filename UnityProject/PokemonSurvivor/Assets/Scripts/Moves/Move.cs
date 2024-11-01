@@ -42,7 +42,7 @@ public interface Move
         }
         if (pokemon.evolution.next.Count > 0)
         {
-            Debug.Log(pokemon.evolution.next[0][0]);
+            //Debug.Log(pokemon.evolution.next[0][0]);
             long nextlevel;
 
             Int64.TryParse(pokemon.evolution.next[0][1], out nextlevel);
@@ -50,6 +50,7 @@ public interface Move
             Int64.TryParse(pokemon.evolution.next[0][0], out evoID);
             if(nextlevel == 0)
             {
+                nextlevel = 100;
                 if (pokemon.evolution.next[0][1].Contains("fire-stone"))
                 {
                     if (player.fireStoneAmount > 0)
@@ -95,8 +96,10 @@ public interface Move
                 else
                 if (pokemon.evolution.next[0][1].Contains("friendship"))
                 {
+                    Debug.Log("friend");
                     if (player.sootheBellAmount > 0)
                     {
+                        Debug.Log("has soothe");
                         nextlevel = 0;
                     }
                 }
@@ -111,6 +114,7 @@ public interface Move
                 Debug.Log("Evo");
                 pokemon = pokeDex.pokeDex[(int)(evoID - 1)];
                 partyController.PartyUpdated.Invoke();
+                Settings.AddPokemon((int)evoID);
             }
         }
     }

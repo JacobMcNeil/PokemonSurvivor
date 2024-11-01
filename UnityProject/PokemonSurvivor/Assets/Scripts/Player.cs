@@ -114,12 +114,12 @@ public class Player : MonoBehaviour
                     if (!m.isFrozen)
                     {
                         int damageAmount = Mathf.CeilToInt((m.attack + m.spAttack) * .1f);
-                        Debug.Log(damageAmount);
+                        //Debug.Log(damageAmount);
                         if (revenge != null)
                         {
                             damageAmount -= (int)revenge.damageReduction;
                         }
-                        Debug.Log(damageAmount);
+                        //Debug.Log(damageAmount);
                         if (damageAmount > 0)
                         {
                             if (ironDefence != null)

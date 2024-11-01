@@ -61,18 +61,18 @@ public class RazorLeaf : MonoBehaviour, Move
         multi += stoneAmount;
         if (pokemon.evolution.next != null)
         {
-            Debug.Log("everstone: " + player.everStoneAmount);
+            //Debug.Log("everstone: " + player.everStoneAmount);
             multi += player.everStoneAmount;
         }
         if ((pokemon.@base.HP + pokemon.@base.Attack + pokemon.@base.Defense + pokemon.@base.SpAttack + pokemon.@base.SpDefense + pokemon.@base.Speed) < 500)
         {
-            Debug.Log("commonBoostAmount: " + player.commonBoostAmount);
+            //Debug.Log("commonBoostAmount: " + player.commonBoostAmount);
             multi += player.commonBoostAmount;
         }
         else
         if ((pokemon.@base.HP + pokemon.@base.Attack + pokemon.@base.Defense + pokemon.@base.SpAttack + pokemon.@base.SpDefense + pokemon.@base.Speed) < 550)
         {
-            Debug.Log("rareBoostAmount: " + player.rareBoostAmount);
+            //Debug.Log("rareBoostAmount: " + player.rareBoostAmount);
             multi += player.rareBoostAmount;
         }
         MultiAmount = multi;

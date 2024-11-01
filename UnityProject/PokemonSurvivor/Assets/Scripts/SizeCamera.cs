@@ -17,13 +17,13 @@ public class SizeCamera : MonoBehaviour
         {
             //camera.rect.Set(1, (camera.scaledPixelWidth * 16 / 9) / camera.scaledPixelHeight, 0, 0);
             camera.rect = new Rect(0, (1 - startWidth * 1f / startHeight) * .5f, 1, startWidth * 1f / startHeight);
-            Debug.Log("here");
+            //Debug.Log("here");
         }
         if (camera.scaledPixelWidth > camera.scaledPixelHeight)
         {
             //camera.rect.Set(1, (camera.scaledPixelWidth * 16 / 9) / camera.scaledPixelHeight, 0, 0);
             camera.rect = new Rect((1 - startHeight * 1f / startWidth) * .5f, 0, startHeight * 1f / startWidth, 1);
-            Debug.Log("here");
+            //Debug.Log("here");
         }
         //camera.aspect = 16 / 9;
     }

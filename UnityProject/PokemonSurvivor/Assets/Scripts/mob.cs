@@ -99,10 +99,11 @@ public class mob : MonoBehaviour
     public float levelScale;
     public float distanceFromPlayer;
 
-
+    public GameObject parent;
     // Start is called before the first frame update
     void Awake()
     {
+        parent = transform.parent.gameObject;
         PolygonCollider2D p =  gameObject.AddComponent<PolygonCollider2D>();
         var myPoints = p.points;
         // do stuff with myPoints array
@@ -208,6 +209,13 @@ public class mob : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isBoss && (transform.position - player.transform.position).magnitude > 7)
+        {
+            var delta = transform.position - player.transform.position;
+            transform.position = transform.position - (delta) * 1.75f;
+            transform.position = new Vector3(transform.position.x, transform.position.y,  -0.15f);
+            //transform.position = Vector3.zero;
+        }
         dir = playerRb.position - rb.position;
 
         if (!isFrozen)

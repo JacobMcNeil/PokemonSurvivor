@@ -223,5 +223,5 @@ MonoBehaviour:
   level: 0
   <moveName>k__BackingField: RazorLeaf
   <moveType>k__BackingField: grass
-  razorLeaf: {fileID: 1358326184512564390, guid: e2eefe6a1d7dbdd469bd009620783d71, type: 3}
+  razorLeaf: {fileID: 1358326184512564390, guid: 6044878f6dd41be41a5070d1028ca84c, type: 3}
   MultiAmount: 0

@@ -32,6 +32,7 @@ public class LevelUpPanel : MonoBehaviour
     public GameObject statLine;
     public Image image;
     public Image backgroundImage;
+    public Image caught;
 
     private void NewPokemon()
     {
@@ -58,12 +59,20 @@ public class LevelUpPanel : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Player>();
         addToParty_B.onClick.AddListener(AddPokemonToParty);
         partyController = GameObject.Find("Party").GetComponent<PartyController>();
+        if (Settings.unlockedPokemon.Contains((int)move.pokemon.id))
+        {
+            caught.enabled = true;
+        }
+        else
+        {
+            caught.enabled = false;
+        }
     }
 
     private void AddPokemonToParty()
     {
-        Debug.Log(levelUpWindow.GetComponent<LevelUpWindow>());
-        Debug.Log(levelUpWindow.GetComponent<LevelUpWindow>().MovePool.Find(p => p.name == move.moveName));
+        //Debug.Log(levelUpWindow.GetComponent<LevelUpWindow>());
+        //Debug.Log(levelUpWindow.GetComponent<LevelUpWindow>().MovePool.Find(p => p.name == move.moveName));
         GameObject AddedPokemon = Instantiate(levelUpWindow.GetComponent<LevelUpWindow>().MovePool.Find(p => p.name == move.moveName));
         if(move.moveName == "Revenge")
         {
@@ -74,6 +83,7 @@ public class LevelUpPanel : MonoBehaviour
             player.ironDefence = AddedPokemon.GetComponent<IronDefence>();
         }
         levelUpWindow.GetComponent<LevelUpWindow>().addedTypes.Add(move.moveType);
+        Settings.AddPokemon((int)move.pokemon.id);
         AddedPokemon.GetComponent<Move>().pokemon = move.pokemon;
         AddedPokemon.transform.SetParent(player.transform, false);
         levelUpWindow.SetActive(false);

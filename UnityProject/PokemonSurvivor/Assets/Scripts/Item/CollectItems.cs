@@ -38,6 +38,6 @@ public class CollectItems : MonoBehaviour
         {
             p.collect = true;
         }
-        Debug.Log("add");
+        //Debug.Log("add");
     }
 }

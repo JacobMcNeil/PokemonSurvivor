@@ -173,7 +173,7 @@ public class TrainerCardWindow : MonoBehaviour
     }
     private void OnEnable()
     {
-        Debug.Log("TrainerCardWindow");
+        //Debug.Log("TrainerCardWindow");
         List<int> choices = new List<int>();
         for (int i = 0; i < 3; i++)
         {

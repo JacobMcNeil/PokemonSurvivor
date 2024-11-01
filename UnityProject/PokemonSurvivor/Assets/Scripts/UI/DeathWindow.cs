@@ -12,6 +12,8 @@ public class DeathWindow : MonoBehaviour
     Button keepLevels_B;
     [SerializeField]
     Button restart_B;
+    [SerializeField]
+    Button MainMenu_B;
 
     public Player player;
     public SpawnMobs spawnMobs;
@@ -21,6 +23,7 @@ public class DeathWindow : MonoBehaviour
     {
         keepLevels_B.onClick.AddListener(KeepLevels);
         restart_B.onClick.AddListener(Restart);
+        MainMenu_B.onClick.AddListener(GotoMainMenu);
     }
 
     private void Restart()
@@ -71,6 +74,11 @@ public class DeathWindow : MonoBehaviour
         //}
 
 
+    }
+
+    void GotoMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     // Update is called once per frame

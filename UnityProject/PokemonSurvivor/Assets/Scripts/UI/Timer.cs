@@ -20,7 +20,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lastReset = 0;
+        lastReset = Time.time;
     }
 
     // Update is called once per frame

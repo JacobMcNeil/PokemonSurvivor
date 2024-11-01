@@ -1,8 +1,10 @@
+using Newtonsoft.Json;
 using PokeAPI.Pokemon;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -13,6 +15,8 @@ public class LevelUpWindow : MonoBehaviour
     public GameObject levelUpPanel;
     public GameObject levelUpCanvas;
     public PokeDex pokemonPool;
+    //public List<int> unlockedPokemon;
+    public List<int> wavePokemon;
     public List<GameObject> MovePool;
     public List<string> addedTypes;
 
@@ -20,6 +24,7 @@ public class LevelUpWindow : MonoBehaviour
 
     List<int> Rarity = new List<int>();
     List<int> typeTracker = new List<int>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +34,34 @@ public class LevelUpWindow : MonoBehaviour
         //}
     }
 
+    public void saveUnlockedPokemon()
+    {
+        string test = JsonConvert.SerializeObject(Settings.unlockedPokemon);
+        //Debug.LogError(test);
+        //Debug.LogError(Application.persistentDataPath);
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/saveData", test);
+    }
+
+    public List<int> loadUnlockedPokemon()
+    {
+        if (!System.IO.File.Exists(Application.persistentDataPath + "/saveData"))
+        {
+            System.IO.File.WriteAllText(Application.persistentDataPath + "/saveData", "[1,4,7]");
+        }
+        string file = System.IO.File.ReadAllText(Application.persistentDataPath + "/saveData");
+        List<int> ints = JsonConvert.DeserializeObject<List<int>>(file);
+        return ints;
+    }
+    //[DllImport("__Internal")]
+    //private static extern void JS_FileSystem_Sync();
+    //private void SyncJS()
+    //{
+    //    JS_FileSystem_Sync();
+    //}
+
     private void OnEnable()
     {
+         Settings.unlockedPokemon = loadUnlockedPokemon();
         //for(int j = 0; j < 100; j++)
         //{
         Rarity.Add(500);
@@ -57,8 +88,11 @@ public class LevelUpWindow : MonoBehaviour
                     }
                     else
                     {
-                        choices.Add(rInt);
-                        chosenMoves.Add(MovePool[rInt]);
+                        if (GetValidPokemon(MovePool[rInt].GetComponent<Move>().moveType,1000, 0).Count > 0)
+                        {
+                            choices.Add(rInt);
+                            chosenMoves.Add(MovePool[rInt]);
+                        }
                     }
                 }
                 trys++;
@@ -225,7 +259,8 @@ public class LevelUpWindow : MonoBehaviour
                 p.evolution.prev == null
                 && p.type.Contains(type)
                 && GetBaseStatTotal(GetHighestEvo(p)) <= baseStatCap
-                && GetBaseStatTotal(GetHighestEvo(p)) >= baseStatFloor)
+                && GetBaseStatTotal(GetHighestEvo(p)) >= baseStatFloor
+                && (Settings.unlockedPokemon.Contains((int)p.id) || wavePokemon.Contains((int)p.id) || Settings.freePlay))
             {
                 validPokemon.Add(p);
             }
@@ -241,7 +276,7 @@ public class LevelUpWindow : MonoBehaviour
             //Debug.LogError(type);
             //Debug.LogError(baseStatCap);
             //Debug.LogError(baseStatFloor);
-            Debug.LogError("could not find any" + type + baseStatCap.ToString());
+            //Debug.Log("could not find any" + type + baseStatCap.ToString());
         }
         return validPokemon;
     }
@@ -253,6 +288,7 @@ public class LevelUpWindow : MonoBehaviour
             Destroy(l.gameObject);
         }
         Time.timeScale = 1f;
+        saveUnlockedPokemon();
     }
 
     // Update is called once per frame
